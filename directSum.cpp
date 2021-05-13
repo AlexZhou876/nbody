@@ -30,7 +30,7 @@ class DirectSum : public Sim {
                 }
                 for (Particle* p : particles) {
                     p->updateVelPos(1e3);
-                    //p->wrapPos(width, height);
+                    p->wrapPos(width, height);
                     //std::cout << p->pos.x << ',' << p->pos.y << std::endl;
                     
                 }

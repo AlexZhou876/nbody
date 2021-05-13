@@ -22,33 +22,23 @@ int main() {
     Particle* p4 = new Particle({550,500},{0,-7e-6},{0,0},100);
     Particle* p5 = new Particle({100,200},{0,0},{0,0},100);
     Particle* p6 = new Particle({500,600},{0,-1e-5},{0,0},100);
-    Particle* p7 = new Particle({400,100},{0,1e-3},{0,0},10000);
+    Particle* p7 = new Particle({400,400},{-1e-4,-1e-4},{0,0},10000);
     Particle* p8 = new Particle({100,500},{0,-7e-6},{0,0},100);
+    Particle* p1 = new Particle({101,100},{0,0},{0,0},100);
+    Particle* p21 = new Particle({500,501},{0,-7e-6},{0,0},100);
+    Particle* p31 = new Particle({150,101},{0,0},{0,0},100);
+    Particle* p41 = new Particle({554,500},{0,-7e-6},{0,0},100);
+    Particle* p51 = new Particle({103,200},{0,0},{0,0},100);
+    Particle* p61 = new Particle({503,600},{0,-1e-5},{0,0},100);
+    Particle* p71 = new Particle({600,300},{1e-5,1e-6},{0,0},100000);
+    Particle* p81 = new Particle({100,580},{0,-7e-6},{0,0},100);
 
-
-
-
-
-// constexpr float dt=1.0/100.0f;
-// 	constexpr float r=5.5f,R=30.0f;
-// 	Body Sun(10000.0f,7.0f);
-// 	Body Earth(1000.0f,2.0f);
-// 	Body Moon(1.0f,1.2f);
-	
-// 	Sun.pos={0.0f,0.0f};
-// 	Sun.vel={0.0f,0.0f};
-	
-// 	Earth.pos={R,0.0f};
-// 	Earth.vel={0.0f,sqrt(Sun.m/R)};
-	
-// 	Moon.pos={R,r};
-// 	Moon.vel={sqrt(Earth.m/r),Earth.vel.y};
-
-    std::vector<Particle*> vec = {p,p2,p3,p4,p5,p6,p7,p8};
+    std::vector<Particle*> vec = {p,p2,p3,p4,p5,p6,p7,p8,p1,p21,p31,p41,p51,p61,p71,p81};
     Sim* sim = new DirectSum(vec, 1500, 1500);
+    //Sim* sim2 = new QTree();
 
     //sf::Window window(sf::VideoMode(800, 600), "My window");
-    sf::RenderWindow w(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow w(sf::VideoMode(1000, 1000), "Simulation");
     while (w.isOpen())
     {
 
@@ -82,11 +72,8 @@ int main() {
 
         // draw everything here...
 
-        for (Particle* p : sim->getParticles()) {
-            sf::CircleShape circle(5, 30);
-            circle.setPosition(sf::Vector2f(p->pos.x, p->pos.y));
-            w.draw(circle);
-        }
+        sim->render(w);
+
         // sf::Vertex point(sf::Vector2f(100, 100), sf::Color::White);
 
         

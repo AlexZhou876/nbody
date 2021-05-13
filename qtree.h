@@ -29,6 +29,8 @@ public:
     // render the particles onto window
     void renderParticles(sf::RenderWindow& window);
 
+    void render(sf::RenderWindow& w);
+
     /*
     * @param rhs The right hand side of the assignment statement.
     */

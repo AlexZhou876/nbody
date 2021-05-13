@@ -68,6 +68,13 @@ float Node::incrementalCtrMass(float newTotalMass, float nthMass, float nthPos, 
     return prevCtrMass + (nthMass*nthPos - prevCtrMass) / newTotalMass;
 }
 
+
+void QTree::render(sf::RenderWindow& w) {
+    Sim::render(w);
+    // render node boundaries
+}
+
+
 // this version is too costly to run every x timesteps
 // QTree::Node* QTree::build(Vec2d ul, std::vector<Particle*>& particles, float width) {
 //     std::vector<Particle*> nw;
