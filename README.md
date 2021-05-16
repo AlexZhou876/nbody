@@ -1,3 +1,6 @@
+![alt-text](media/nbodyanimation.gif)
+
+
 # nbody
 an n-body gravitational simulation using brute force and Barnes-Hut methods, visualized.
 
