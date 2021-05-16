@@ -1,4 +1,7 @@
+<!---
 ![alt-text](media/nbodyanimation.gif)
+-->
+<img src=media/nbodyanimation.gif alt="alt text" width="250" height="250">
 
 
 # nbody
