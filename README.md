@@ -2,12 +2,12 @@
 an n-body gravitational simulation using brute force and Barnes-Hut methods, visualized.
 
 ## Instructions
-libraries: brew install sfml
-\ncompile: make
-\nrun: ./nbody
+libraries: brew install sfml  
+compile: make  
+run: ./nbody  
 
 ## Notes
-
+Work in progress. Barnes-Hut method yet to be implemented.
 
 ### Code-Related
 
@@ -15,4 +15,4 @@ libraries: brew install sfml
 ## Improvements
 Implement Barnes-Hut tree
 Procedurally generate galaxy
-Procedurally generate stable system
+Procedurally generate stable systems
